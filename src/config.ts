@@ -31,8 +31,9 @@ export const LINKS = {
  */
 export const RELEASE = {
   version: 'v0.1.1',
-  // İndirme boyutu (yaklaşık). Gerçek dosya boyutuyla güncelle.
-  sizeWindows: '~64 MB',
-  // Doğrudan .exe bağlantısı vermek istersen doldur; boşsa Releases sayfasına gider.
-  windowsExe: '',
+  // İndirme boyutu (yaklaşık).
+  sizeWindows: '~3.75 MB',
+  // Doğrudan .exe bağlantısı. public/downloads/ altındaki dosya butona
+  // tıklayınca anında iner. (Boş bırakılırsa Releases sayfasına gider.)
+  windowsExe: '/downloads/Staple_0.1.1_x64-setup.exe',
 };

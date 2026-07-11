@@ -1,5 +1,9 @@
 ---
 import { LINKS, RELEASE } from '../config';
+
+const windowsHref = RELEASE.windowsExe || LINKS.GITHUB_RELEASES_URL;
+// Yerel dosya (public/) ise doğrudan indir; harici link ise yeni sekmede aç.
+const isLocalExe = windowsHref.startsWith('/');
 ---
 
 <section class="bg-tile relative overflow-hidden">
@@ -40,9 +44,10 @@ import { LINKS, RELEASE } from '../config';
 
     <div class="reveal mt-9 flex flex-col items-center gap-3 sm:flex-row">
       <a
-        href={LINKS.GITHUB_RELEASES_URL}
-        target="_blank"
-        rel="noopener"
+        href={windowsHref}
+        download={isLocalExe ? true : undefined}
+        target={isLocalExe ? undefined : '_blank'}
+        rel={isLocalExe ? undefined : 'noopener'}
         class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gold px-7 py-3.5 text-base font-bold text-primary transition-colors hover:bg-gold-soft sm:w-auto"
       >
         <svg
