@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/*
+ * Staple marka paleti — CSS değişkenleri.
+ * Tailwind v4: @theme ile tanımlı değerler `bg-primary`, `text-gold` gibi
+ * yardımcı sınıflar olarak da kullanılabilir.
+ */
+@theme {
+  --color-primary: #222831; /* koyu lacivert — ana zemin */
+  --color-secondary: #393e46; /* gri — kartlar/paneller */
+  --color-gold: #ffbc1f; /* altın/amber — VURGU, CTA, linkler */
+  --color-gold-soft: #fff3a1; /* açık sarı — hover */
+  --color-ink: #bbbbbb; /* birincil metin */
+  --color-ink-bright: #dddddd; /* ikincil (parlak) metin */
+
+  --font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+
+  --radius-2xl: 1rem;
+}
+
+/* Ham CSS'te de kullanılabilecek değişkenler */
+:root {
+  --primary-bg: #222831;
+  --secondary-bg: #393e46;
+  --tertiary-bg: #ffbc1f;
+  --quaternary-bg: #fff3a1;
+  --primary-text: #bbbbbb;
+  --secondary-text: #dddddd;
+
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Sabit üst menü için ankraj kaydırma boşluğu */
+:target {
+  scroll-margin-top: 6rem;
+}
+
+/* Tekrarlı "tile" doku deseni — koyu zemin üzerinde ince zımba/ataç motifi */
+.bg-tile {
+  background-color: var(--primary-bg);
+  background-image: url('/tile.png');
+  background-repeat: repeat;
+  background-size: 240px 240px;
+}
+
+/* Altın degrade metin vurgusu */
+.text-gold-gradient {
+  background: linear-gradient(120deg, #ffbc1f 0%, #fff3a1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Odak halkası — klavye erişilebilirliği */
+:where(a, button):focus-visible {
+  outline: 2px solid var(--tertiary-bg);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* Hafif giriş animasyonu (JS'siz, IntersectionObserver ile tetiklenir) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,109 @@
+---
+import { LINKS, RELEASE } from '../config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 bg-primary">
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+    <div class="flex flex-col gap-10 md:flex-row md:justify-between">
+      <div class="max-w-sm">
+        <a href="#" class="flex items-center gap-2.5" aria-label="Staple ana sayfa">
+          <img
+            src="/staple-icon.png"
+            alt="Staple logosu"
+            width="36"
+            height="36"
+            class="h-9 w-9 rounded-lg"
+          />
+          <span class="text-lg font-extrabold text-ink-bright">Staple</span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-ink">
+          Toplulukların, arkadaşların ve sohbetlerin tek çatı altında. Konuş,
+          sesli takıl, ekran paylaş — hepsini tek yere zımbala.
+        </p>
+      </div>
+
+      <nav
+        class="grid grid-cols-2 gap-8 sm:grid-cols-3"
+        aria-label="Alt menü"
+      >
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-ink-bright">
+            Ürün
+          </h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li>
+              <a href="#ozellikler" class="text-ink transition-colors hover:text-gold"
+                >Özellikler</a
+              >
+            </li>
+            <li>
+              <a href="#indir" class="text-ink transition-colors hover:text-gold"
+                >İndir</a
+              >
+            </li>
+            <li>
+              <a href="#ekranlar" class="text-ink transition-colors hover:text-gold"
+                >Ekranlar</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-ink-bright">
+            Bağlantılar
+          </h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li>
+              <a
+                href={LINKS.WEB_APP_URL}
+                target="_blank"
+                rel="noopener"
+                class="text-ink transition-colors hover:text-gold">Web’de Aç</a
+              >
+            </li>
+            <li>
+              <a
+                href={LINKS.GITHUB_URL}
+                target="_blank"
+                rel="noopener"
+                class="text-ink transition-colors hover:text-gold">GitHub</a
+              >
+            </li>
+            <li>
+              <a href={LINKS.PRIVACY_URL} class="text-ink transition-colors hover:text-gold"
+                >Gizlilik</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-ink-bright">
+            Destek
+          </h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li>
+              <a href="#sss" class="text-ink transition-colors hover:text-gold">SSS</a>
+            </li>
+            <li>
+              <a
+                href={LINKS.GITHUB_RELEASES_URL}
+                target="_blank"
+                rel="noopener"
+                class="text-ink transition-colors hover:text-gold">Sürümler</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-sm text-ink/70 sm:flex-row"
+    >
+      <p>© {year} Staple. Tüm hakları saklıdır.</p>
+      <p>Sürüm {RELEASE.version}</p>
+    </div>
+  </div>
+</footer>

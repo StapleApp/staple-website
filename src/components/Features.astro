@@ -1,0 +1,100 @@
+---
+// Öne çıkan özellikler. Her ikon sade, tek renk (currentColor) inline SVG.
+const features = [
+  {
+    title: 'Sunucular & Kanallar',
+    desc: 'Kategoriler, metin ve ses kanalları, roller ve yetkilerle topluluğunu istediğin gibi düzenle.',
+    icon: 'servers',
+  },
+  {
+    title: 'Sesli Sohbet',
+    desc: 'WebRTC ile düşük gecikmeli ses; kimin konuştuğunu gösteren canlı algılama, kişi bazlı ses seviyesi ve gürültü engelleme.',
+    icon: 'mic',
+  },
+  {
+    title: 'Ekran Paylaşımı',
+    desc: 'Sistem sesiyle birlikte tüm ekranını ya da tek bir pencereyi paylaş.',
+    icon: 'screen',
+  },
+  {
+    title: 'Zengin Mesajlaşma',
+    desc: 'Düzenle, sil, yanıtla; “yazıyor…” göstergesi, GIF, emoji ve görsel desteği.',
+    icon: 'chat',
+  },
+  {
+    title: 'Arkadaşlar & DM',
+    desc: 'Arkadaşlık kodu ile ekle, istek gönder ve kabul et; birebir sohbet, okunmamış rozetleri.',
+    icon: 'friends',
+  },
+  {
+    title: 'Bildirim Merkezi',
+    desc: 'Kalıcı bildirimler; okundu/okunmadı takibi ve tek tek silebilme.',
+    icon: 'bell',
+  },
+  {
+    title: 'Durum & Presence',
+    desc: 'Çevrimiçi · Uyuyor · Rahatsız Etmeyin · Çevrimdışı — herkes ne durumda gör.',
+    icon: 'status',
+  },
+  {
+    title: 'Masaüstü + Web',
+    desc: 'Tauri ile hızlı bir Windows uygulaması ya da tarayıcıdan anında; nerede olursan ol bağlan.',
+    icon: 'devices',
+  },
+];
+
+const icons: Record<string, string> = {
+  servers:
+    '<path d="M4 4h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm0 9h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1Zm3 2.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm0-9a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>',
+  mic: '<path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3Zm-7 8a1 1 0 0 1 2 0 5 5 0 0 0 10 0 1 1 0 1 1 2 0 7 7 0 0 1-6 6.93V21a1 1 0 1 1-2 0v-2.07A7 7 0 0 1 5 11Z"/>',
+  screen:
+    '<path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-5v2h2a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h2v-2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v9h16V6H4Z"/>',
+  chat: '<path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-4 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 6a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7Zm0-3a1 1 0 0 0 0 2h10a1 1 0 1 0 0-2H7Z"/>',
+  friends:
+    '<path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-7 2c-3.3 0-6 1.9-6 4.5V20a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2.5C15 14.9 12.3 13 9 13Zm8 .1c-.5 0-1 .05-1.5.15A6.5 6.5 0 0 1 17 17.5V20h4a1 1 0 0 0 1-1v-1.5c0-2.4-2.2-4.4-5-4.4Z"/>',
+  bell: '<path d="M12 2a6 6 0 0 0-6 6c0 3.1-.8 5.2-1.7 6.5-.5.7 0 1.7.9 1.7h13.6c.9 0 1.4-1 .9-1.7C18.8 13.2 18 11.1 18 8a6 6 0 0 0-6-6Zm0 20a2.8 2.8 0 0 0 2.7-2h-5.4A2.8 2.8 0 0 0 12 22Z"/>',
+  status:
+    '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/>',
+  devices:
+    '<path d="M3 4h13a1 1 0 0 1 1 1v2h-2V6H4v8h7v2H8v2h2a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h2v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm12 5h5a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Zm1 2v6h3v-6h-3Z"/>',
+};
+---
+
+<section id="ozellikler" class="relative py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2
+        class="reveal text-3xl font-extrabold tracking-tight text-ink-bright sm:text-4xl"
+      >
+        Bir topluluğun ihtiyacı olan her şey
+      </h2>
+      <p class="reveal mt-4 text-lg text-ink">
+        Konuşmaktan ekran paylaşmaya, arkadaş eklemekten bildirimlere kadar —
+        Staple her şeyi tek yerde zımbalıyor.
+      </p>
+    </div>
+
+    <div
+      class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+    >
+      {
+        features.map((f) => (
+          <article class="reveal group flex flex-col rounded-2xl border border-white/5 bg-secondary p-6 transition-colors hover:border-gold/40">
+            <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-gold transition-transform group-hover:scale-105">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-6 w-6"
+                aria-hidden="true"
+                set:html={icons[f.icon]}
+              />
+            </div>
+            <h3 class="text-lg font-bold text-ink-bright">{f.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink">{f.desc}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
