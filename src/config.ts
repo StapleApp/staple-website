@@ -33,7 +33,9 @@ export const RELEASE = {
   version: 'v0.1.1',
   // İndirme boyutu (yaklaşık).
   sizeWindows: '~3.75 MB',
-  // Doğrudan .exe bağlantısı. public/downloads/ altındaki dosya butona
-  // tıklayınca anında iner. (Boş bırakılırsa Releases sayfasına gider.)
-  windowsExe: '/downloads/Staple_0.1.1_x64-setup.exe',
+  // Doğrudan .exe bağlantısı. GitHub'ın "latest" yönlendirmesi HER ZAMAN
+  // en son yayınlanan release'in installer'ını indirir; yeni sürüm çıkınca
+  // bu linki değiştirmene gerek yok. (Boş bırakılırsa Releases sayfasına gider.)
+  windowsExe:
+    'https://github.com/StapleApp/client/releases/latest/download/Staple-Setup.exe',
 };
