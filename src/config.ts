@@ -19,7 +19,7 @@ export const LINKS = {
   // Masaüstü sürüm indirmeleri (GitHub Releases sayfası)
   GITHUB_RELEASES_URL: 'https://github.com/KULLANICI/StapleApp/releases',
   // Web uygulamasının canlı adresi
-  WEB_APP_URL: 'https://app.staple.example',
+  WEB_APP_URL: 'https://web.stapleapp.com',
   // Ana GitHub repo adresi
   GITHUB_URL: 'https://github.com/KULLANICI/StapleApp',
   // Gizlilik politikası (henüz yoksa # bırakılabilir)
