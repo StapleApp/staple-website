@@ -17,11 +17,11 @@ export const SITE = {
  */
 export const LINKS = {
   // Masaüstü sürüm indirmeleri (GitHub Releases sayfası)
-  GITHUB_RELEASES_URL: 'https://github.com/KULLANICI/StapleApp/releases',
+  GITHUB_RELEASES_URL: 'https://github.com/StapleApp/client/releases',
   // Web uygulamasının canlı adresi
   WEB_APP_URL: 'https://web.stapleapp.com',
   // Ana GitHub repo adresi
-  GITHUB_URL: 'https://github.com/KULLANICI/StapleApp',
+  GITHUB_URL: 'https://github.com/StapleApp',
   // Gizlilik politikası (henüz yoksa # bırakılabilir)
   PRIVACY_URL: '#',
 };
