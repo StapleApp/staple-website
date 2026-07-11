@@ -30,10 +30,9 @@ export const LINKS = {
  * Masaüstü sürüm bilgileri — PLACEHOLDER.
  */
 export const RELEASE = {
-  version: 'v0.1.0',
+  version: 'v0.1.1',
   // İndirme boyutu (yaklaşık). Gerçek dosya boyutuyla güncelle.
   sizeWindows: '~64 MB',
-  // Doğrudan .exe / .msi bağlantısı vermek istersen doldur; boşsa Releases sayfasına gider.
+  // Doğrudan .exe bağlantısı vermek istersen doldur; boşsa Releases sayfasına gider.
   windowsExe: '',
-  windowsMsi: '',
 };
