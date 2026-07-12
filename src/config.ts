@@ -33,9 +33,12 @@ export const RELEASE = {
   version: 'v0.1.2',
   // İndirme boyutu (yaklaşık).
   sizeWindows: '~3.75 MB',
-  // Doğrudan .exe bağlantısı. GitHub'ın "latest" yönlendirmesi HER ZAMAN
+  sizeMac: '~3.9 MB',
+  // Doğrudan .exe ve .dmg bağlantıları. GitHub'ın "latest" yönlendirmesi HER ZAMAN
   // en son yayınlanan release'in installer'ını indirir; yeni sürüm çıkınca
-  // bu linki değiştirmene gerek yok. (Boş bırakılırsa Releases sayfasına gider.)
+  // bu linkleri değiştirmene gerek yok.
   windowsExe:
     'https://github.com/StapleApp/client/releases/latest/download/Staple-Setup.exe',
+  macDmg:
+    'https://github.com/StapleApp/client/releases/latest/download/Staple.dmg',
 };
