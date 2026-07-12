@@ -41,4 +41,8 @@ export const RELEASE = {
     'https://github.com/StapleApp/client/releases/latest/download/Staple-Setup.exe',
   macDmg:
     'https://github.com/StapleApp/client/releases/latest/download/Staple.dmg',
+  androidApk:
+    'https://github.com/StapleApp/client/releases/latest/download/Staple.apk',
+  iosZip:
+    'https://github.com/StapleApp/client/releases/latest/download/Staple-iOS.zip',
 };

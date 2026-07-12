@@ -3,6 +3,8 @@ import { LINKS, RELEASE } from '../config';
 
 const windowsHref = RELEASE.windowsExe || LINKS.GITHUB_RELEASES_URL;
 const macHref = RELEASE.macDmg || LINKS.GITHUB_RELEASES_URL;
+const androidHref = RELEASE.androidApk || LINKS.GITHUB_RELEASES_URL;
+const iosHref = RELEASE.iosZip || LINKS.GITHUB_RELEASES_URL;
 ---
 
 <section id="indir" class="relative py-24">
@@ -125,6 +127,106 @@ const macHref = RELEASE.macDmg || LINKS.GITHUB_RELEASES_URL;
             class="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3 text-base font-bold text-primary transition-colors hover:bg-gold-soft"
           >
             .dmg indir
+          </a>
+        </div>
+        <a
+          href={LINKS.GITHUB_RELEASES_URL}
+          target="_blank"
+          rel="noopener"
+          class="mt-4 text-center text-xs text-ink/70 underline-offset-2 hover:text-gold hover:underline"
+          >Tüm sürümler (GitHub Releases)</a
+        >
+      </article>
+    </div>
+
+    <!-- Mobil Sürümler -->
+    <div class="mt-20 text-center">
+      <h3
+        class="reveal text-2xl font-extrabold tracking-tight text-ink-bright sm:text-3xl"
+      >
+        Mobil Sürümler
+      </h3>
+      <p class="reveal mt-4 text-sm text-ink">
+        Topluluğuna mobilden de bağlı kal. Son versiyonları doğrudan indir.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 max-w-4xl mx-auto md:grid-cols-2">
+      <!-- Android kartı -->
+      <article
+        class="reveal flex flex-col rounded-2xl border border-white/5 bg-secondary p-8"
+      >
+        <div
+          class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-gold"
+        >
+          <!-- Android SVG Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-6 w-6"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2c.28 0 .5.22.5.5V5h4c2.2 0 4 1.8 4 4v9c0 2.2-1.8 4-4 4H7.5c-2.2 0-4-1.8-4-4V9c0-2.2 1.8-4 4-4h4V2.5c0-.28.22-.5.5-.5Zm-5 7c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1Zm10 0c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1Z"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-ink-bright">Android</h3>
+        <p class="mt-2 text-sm text-ink">
+          Android cihazlar için derlenmiş resmi kurulum paketi.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3">
+          <a
+            href={androidHref}
+            download
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3 text-base font-bold text-primary transition-colors hover:bg-gold-soft"
+          >
+            .apk indir
+          </a>
+        </div>
+        <a
+          href={LINKS.GITHUB_RELEASES_URL}
+          target="_blank"
+          rel="noopener"
+          class="mt-4 text-center text-xs text-ink/70 underline-offset-2 hover:text-gold hover:underline"
+          >Tüm sürümler (GitHub Releases)</a
+        >
+      </article>
+
+      <!-- iOS kartı -->
+      <article
+        class="reveal flex flex-col rounded-2xl border border-white/5 bg-secondary p-8"
+      >
+        <div
+          class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-gold"
+        >
+          <!-- Apple SVG Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-6 w-6"
+            aria-hidden="true"
+          >
+            <path
+              d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C3.8 16.32 3.1 9.88 7.02 5.92c.98-.98 2.15-1 3.03-.52 1.05.57 1.84.5 2.87 0 .84-.4 2.15-.55 3.1.4 1.25.9 2.05 2.2 2.45 3.97-2.6 1.1-2.2 4.63.4 5.75-.5 1.5-1.23 3.32-2.82 4.76M12.03 5.4c.12-2.26 1.88-4.22 3.98-4.4.24 2.4-1.92 4.62-3.98 4.4"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-ink-bright">iOS (iPhone)</h3>
+        <p class="mt-2 text-sm text-ink">
+          iOS cihazlar için uygulama paketi (Simulator / Sideloading).
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3">
+          <a
+            href={iosHref}
+            download
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3 text-base font-bold text-primary transition-colors hover:bg-gold-soft"
+          >
+            .app indir (zip)
           </a>
         </div>
         <a
