@@ -68,5 +68,22 @@ const ogImage = new URL(SITE.ogImage, Astro.site).href;
         els.forEach((el) => el.classList.add('is-visible'));
       }
     </script>
+
+    <!-- Dinamik GitHub sürüm bilgisini alıp eşleme -->
+    <script>
+      try {
+        fetch('https://api.github.com/repos/StapleApp/client/releases/latest')
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && data.tag_name) {
+              const version = data.tag_name;
+              document.querySelectorAll('.latest-version').forEach((el) => {
+                el.textContent = version;
+              });
+            }
+          })
+          .catch((err) => console.debug('Latest version fetch failed:', err));
+      } catch (e) {}
+    </script>
   </body>
 </html>

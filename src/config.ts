@@ -30,7 +30,7 @@ export const LINKS = {
  * Masaüstü sürüm bilgileri — PLACEHOLDER.
  */
 export const RELEASE = {
-  version: 'v0.1.1',
+  version: 'v0.1.2',
   // İndirme boyutu (yaklaşık).
   sizeWindows: '~3.75 MB',
   // Doğrudan .exe bağlantısı. GitHub'ın "latest" yönlendirmesi HER ZAMAN
